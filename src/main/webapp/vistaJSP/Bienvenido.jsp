@@ -114,7 +114,7 @@ function cerrar() {
 <%
 //HttpSession session = request.getSession();
 if(session.getAttribute("correo")!=null){
-		response.sendRedirect("Login.jsp");
+		//response.sendRedirect("Login.jsp");
 	}
 	//System.out.println(session.getAttribute("correo")+"sesion");
 	ControladorListar conLib = new ControladorListar();
@@ -159,7 +159,8 @@ if(session.getAttribute("correo")!=null){
 	 <% } %>
 	</table>
 	 
-
+<br>
+<br>
 	
 		<table>
 	<tr>
