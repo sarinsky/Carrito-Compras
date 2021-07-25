@@ -58,8 +58,9 @@ public class ServletListar extends HttpServlet {
 		for (Libro libro : li) {
 			PrintWriter out=response.getWriter();
 			
-			out.println(libro.getNomLibro());
-		    out.println(libro.getAutorLibro());
+			out.println(libro.toString() );
+		    //out.println(libro.getAutorLibro());
+		    
 		   
 		}
 			/*response.getWriter().append("<p>Libros</p>");*/

@@ -32,5 +32,10 @@ public class Libro  extends Articulo{
 		this.editorial = editorial;
 	}
 	
+	@Override
+	public String toString() {
+		return isbn + "," + nomLibro + "," + autorLibro + ","+ editorial ;
+	}
+	
 	
 }

@@ -14,17 +14,25 @@ function mostrarDatos(dato){
 	  .done(function( msg ) {	
 	    console.log( "Data Saved: " + msg );
 			document.getElementById("contenido").value = msg;	
-			
+			console.log(msg.split("\n"));
+			mostrarTabla(["ISBN","LIBRO","NOM", "LIBRO", "AUTOR", "LIBRO","EDITORIAL","PRECIO","CANTIDAD", "LIBRO","IMAGEN"], dato);
 	  });
-	mostrarTabla(["ISBN","LIBRO","NOM", "LIBRO", "AUTOR", "LIBRO","EDITORIAL","PRECIO","CANTIDAD", "LIBRO","IMAGEN"], dato);
+	
 }
 
 
 function mostrarTabla (atributos, tipo){
 	var tabla = document.getElementById("contenidoTabla");
-	var filas = atributos.forEach((at)=> {return "<th>"+at+"<th/>"})  
-	filas= "<tr>"+filas+"</tr>";
-	tabla.appendChild(filas);
+    let row = document.createElement("TR")
+
+	atributos.forEach(
+		(at)=> {
+            var el = document.createElement("TH")
+            
+            el.innerHTML = String(at)
+            row.appendChild(el)
+		})  
+	tabla.append(row)
 	
 }
 
