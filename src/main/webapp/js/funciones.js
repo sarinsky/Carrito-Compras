@@ -1,6 +1,8 @@
 /**
  * 
  */
+ATRIBUTOS_LIBROS = ["ISBN","LIBRO","NOM", "LIBRO", "AUTOR", "LIBRO","EDITORIAL","PRECIO","CANTIDAD", "LIBRO","IMAGEN"]
+
 function cerrar(){
 	window.close;
 }
@@ -15,16 +17,29 @@ function mostrarDatos(dato){
 	    console.log( "Data Saved: " + msg );
 			document.getElementById("contenido").value = msg;	
 			console.log(msg.split("\n"));
-			mostrarTabla(["ISBN","LIBRO","NOM", "LIBRO", "AUTOR", "LIBRO","EDITORIAL","PRECIO","CANTIDAD", "LIBRO","IMAGEN"], dato);
+
+			var tabla = document.getElementById("contenidoTabla");
+    		let row = document.createElement("TR")
+
+			if ( dato == 1) {
+				mostrarTabla(ATRIBUTOS_LIBROS, row, tabla);
+				libros = msg.split("\n")
+				
+				for(const lib of libros) {
+					let row1 = document.createElement("TR")
+					mostrarTabla(lib.split(","), row1, tabla)
+				}
+
+			} else {
+
+			}			
 	  });
 	
 }
 
 
-function mostrarTabla (atributos, tipo){
-	var tabla = document.getElementById("contenidoTabla");
-    let row = document.createElement("TR")
-
+function mostrarTabla (atributos, row, tabla){
+	
 	atributos.forEach(
 		(at)=> {
             var el = document.createElement("TH")
