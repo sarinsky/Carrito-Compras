@@ -131,60 +131,12 @@ if(session.getAttribute("correo")!=null){
 	
 	
 	
-	<table >	
-	
-	
-	<tr>
-		<th>ISBN</th>
-		<th>NOMBRE LIBRO</th>
-	    <th>AUTOR DEL LIBRO</th>
-	    <th>PRECIO </th>
-	    <th>EDITORIAL</th>
-	</tr>
-	<%
-	for(Libro l:conLib.getListLibros()){
-	%>
-	<tr> 
-		<td><%=l.getIsbn() %></td>
-		<td><%=l.getNomLibro() %></td>
-		<td><%=l.getAutorLibro()%></td>
-		<td><%=l.getPrecio() %></td>
-		<td><%=l.getEditorial() %></td>
-		<td><%=l.getCantidad() %></td>
-		
-		
-	</tr>
-	
-	
-	 <% } %>
+	<table  id ="contenidoTabla">	
+
 	</table>
 	 
 <br>
 <br>
-	
-		<table>
-	<tr>
-		<th>CODGO </th>
-		<th>NOMBRE VIDEO</th>
-	    <th>DISTRIBUIDORA</th>
-	    <th>PRECIO </th>
-	    <th>CANTIDAD</th>
-	</tr>
-	
-	<%
-	for(VideoJuego v:conVid.getListVideoJuegos()){
-	%>
-	<tr>
-		<td><%=v.getCveVideo() %></td>
-		<td><%=v.getNom_video() %> </td>
-		<td><%=v.getDistribuidora() %> </td>
-		<td><%=v.getPrecio()%> </td>
-		<td><%=v.getCantidad() %> </td>
-	
-	</tr>
-	
- <% } %>
-	</table>
 	
 	<button class="btn btn-primary" style="text-align: center; margin-left: 200px;">Log out</button>
   
