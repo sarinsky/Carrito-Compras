@@ -131,9 +131,10 @@ if(session.getAttribute("correo")!=null){
 	
 	
 	
-	<table  id ="contenidoTabla">	
+	<table  id ="contenidoTabla" style="text-align: center; margin-left: 100px">	
 
 	</table>
+	
 	 
 <br>
 <br>

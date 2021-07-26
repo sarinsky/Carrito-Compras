@@ -6,6 +6,7 @@ public class Libro  extends Articulo{
 	private String nomLibro;
 	private String autorLibro;
 	private String editorial;
+	//ISBN_LIBRO","NOM_LIBRO","AUTOR_LIBRO", "EDITORIAL", "PRECIO", "CANTIDAD_LIBRO"
 	//Articulo articulo = new Articulo();
 	public int getIsbn() {
 		return isbn;
@@ -34,7 +35,8 @@ public class Libro  extends Articulo{
 	
 	@Override
 	public String toString() {
-		return isbn + "," + nomLibro + "," + autorLibro + ","+ editorial ;
+		return isbn + "," + nomLibro + "," + autorLibro + ","+ editorial+ ", "+ precio +","+cantidad;
+		
 	}
 	
 	

@@ -60,22 +60,17 @@ public class ServletListar extends HttpServlet {
 			
 			out.println(libro.toString() );
 		    //out.println(libro.getAutorLibro());
-		    
-		   
+	   
 		}
-			/*response.getWriter().append("<p>Libros</p>");*/
-			
+			/*response.getWriter().append("<p>Libros</p>");*/	
 			//response.sendRedirect("/vistasJSP/header.jsp");
 		}else {
 			//PrintWriter pw = 
-			response.getWriter().append("<p>Videojuegos</p>");
+			//response.getWriter().append("<p>Videojuegos</p>");
 			for (VideoJuego videoJuego : vid) {
-				response.getWriter().append(videoJuego.getNom_video());
-			
-				 //response.getWriter().append(videoJuego.getNom_video());
-				 //response.getWriter().append(videoJuego.getDistribuidora());
-				 //out.println(videoJuego.getNom_video());
-				//out.println(videoJuego.getDistribuidora());
+				//response.getWriter().append(videoJuego.getNom_video());
+				PrintWriter out = response.getWriter();
+				out.println(videoJuego.toString());
 			}
 			
 		}

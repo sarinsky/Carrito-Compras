@@ -23,6 +23,11 @@ public class VideoJuego extends Articulo {
 	public void setDistribuidora(String distribuidora) {
 		this.distribuidora = distribuidora;
 	}
+	@Override
+	public String toString() {
+		return cveVideo + ", " + nom_video + "," + distribuidora+ ","+precio+","+cantidad;
+				
+	}
 	
 	
 	

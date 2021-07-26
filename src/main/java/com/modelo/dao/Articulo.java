@@ -1,8 +1,8 @@
 package com.modelo.dao;
 
 public class Articulo {
-	private double precio;
-	private int cantidad;
+	protected double precio;
+	protected int cantidad;
 	private String imagen;
 	public double getPrecio() {
 		return precio;
